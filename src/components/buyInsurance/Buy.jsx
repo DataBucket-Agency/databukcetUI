@@ -45,77 +45,80 @@ const Buy = ({ handleContinue, setInsuranceFormData, setProductId, onContinue}) 
       <h2 className="mt-8 text-xl font-bold">Our Products</h2>
       <p className="mb-4">Select a product that fits you</p>
 
-      <div className="lg:flex lg:gap-4 lg:w-[90%] items-center justify-center mx-auto">
-  
-  <div className="lg:w-2/3 h-auto">
-    <div className="p-6 bg-white rounded-lg shadow-md lg:flex lg:justify-between lg:items-center h-auto mb-4">
-      <div>
-        <h3 className="font-bold text-xl">Motor Private Cover</h3>
-        <button
-          className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
-          onClick={() => handleBuyNowClick('Motor Private')}
-        >
-          Buy Now
-        </button>
-        <p className='text-sm text-green-500 mt-4'>Available</p>
-      </div>
-      <img src="./assets/motorprivate.svg" alt="Motor Private" className=" lg:h-64 lg:w-1/2 lg:ml-4" />
-    </div>
-
-    <div className="lg:flex lg:gap-4 lg:w-full mb-4">
-      <div className="p-6 bg-white rounded-lg shadow-md lg:w-1/2 mb-4 lg:mb-0">
-        <img src="./assets/motorcommercial.svg" alt="Motor Commercial" className="mx-auto h-40 lg:h-48" />
-        <h3 className="mt-4 font-bold">Motor Commercial</h3>
-        <button
-          className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
-          onClick={() => handleBuyNowClick('Motor Commercial')}
-        >
-          Buy Now
-        </button>
-        <p className='text-sm text-green-500 mt-4'>Available</p>
-      </div>
-
-      <div className="p-6 bg-white rounded-lg shadow-md lg:w-1/2">
-        <img src="./assets/generalcartage.svg" alt="General Cartage" className="mx-auto h-40 lg:h-48" />
-        <h3 className="mt-4 font-bold">General Cartage</h3>
-        <button
-          className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
-          onClick={() => handleBuyNowClick('General Cartage')}
-        >
-          Buy Now
-        </button>
-        <p className='text-sm text-red-500 mt-4'>Not Available</p>
-      </div>
-    </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-[90%] mx-auto">
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <h3 className="font-bold text-xl">Motor Private Cover</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
+      onClick={() => handleBuyNowClick('Motor Private')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-green-500 mt-4">Available</p>
+    <img src="./assets/motorprivate.svg" alt="Motor Private" className="h-64 w-full mt-4" />
   </div>
 
-  
-  <div className="lg:w-1/3 lg:h-auto space-y-4">
-    <div className="p-6 bg-white rounded-lg shadow-md">
-      <img src="./assets/bodaboda.svg" alt="Bodaboda" className="mx-auto h-30 lg:h-20" />
-      <h3 className="mt-4 font-bold">Bodaboda</h3>
-      <button
-        className="mt-2 px-4 py-2 bg-black text-white rounded-md"
-        onClick={() => handleBuyNowClick('Bodaboda')}
-      >
-        Buy Now
-      </button>
-      <p className='text-sm text-red-500 mt-4'>Not Available</p>
-    </div>
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <img src="./assets/motorcommercial.svg" alt="Motor Commercial" className="mx-auto h-48" />
+    <h3 className="mt-4 font-bold">Motor Commercial</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
+      onClick={() => handleBuyNowClick('Motor Commercial')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-green-500 mt-4">Available</p>
+  </div>
 
-    <div className="p-6 bg-white rounded-lg shadow-md">
-      <img src="./assets/motorbike.svg" alt="Motorcycle" className="mx-auto h-32 lg:h-41" />
-      <h3 className="mt-4 font-bold">Motorcycle</h3>
-      <button
-        className="mt-2 px-4 py-2 bg-black text-white rounded-md"
-        onClick={() => handleBuyNowClick('Motorcycle')}
-      >
-        Buy Now
-      </button>
-      <p className='text-sm text-green-500 mt-4'>Available</p>
-    </div>
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <img src="./assets/generalcartage.svg" alt="General Cartage" className="mx-auto h-48" />
+    <h3 className="mt-4 font-bold">General Cartage</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-zinc-900 text-white rounded-md"
+      onClick={() => handleBuyNowClick('General Cartage')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-red-500 mt-4">Not Available</p>
+  </div>
+
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <img src="./assets/bodaboda.svg" alt="Bodaboda" className="mx-auto h-30" />
+    <h3 className="mt-4 font-bold">Bodaboda</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-black text-white rounded-md"
+      onClick={() => handleBuyNowClick('Bodaboda')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-red-500 mt-4">Not Available</p>
+  </div>
+
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <img src="./assets/motorbike.svg" alt="Motorcycle" className="mx-auto h-30" />
+    <h3 className="mt-4 font-bold">Motorcycle</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-black text-white rounded-md"
+      onClick={() => handleBuyNowClick('Motorcycle')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-green-500 mt-4">Available</p>
+  </div>
+  <div className="p-6 bg-white rounded-lg shadow-md mb-4">
+    <img src="./assets/tuktuk.svg" alt="Bodaboda" className="mx-auto h-30" />
+    <h3 className="mt-4 font-bold">TukTuk</h3>
+    <button
+      className="mt-2 px-4 py-2 bg-black text-white rounded-md"
+      onClick={() => handleBuyNowClick('TukTuk')}
+    >
+      Buy Now
+    </button>
+    <p className="text-sm text-red-500 mt-4">Not Available</p>
   </div>
 </div>
+
+
 
 
       {/* Insurance Form */}
